@@ -1,0 +1,161 @@
+1>  http://wms.rtcsindia.co.in/api/mobile_no_verified_and_otp_send
+
+input: 
+mobile_no:9999999999
+
+output:
+
+{
+    "success": true,
+    "otp_code": 99,
+    "mobile_otp": 12345,
+    "mobile_no": "9999999999"
+}
+
+2> http://wms.rtcsindia.co.in/api/otp_verified_and_login
+
+input:
+mobile_no=9999999999
+mobile_otp=12345
+
+output:
+{
+    "success": true,
+    "token": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTMyZDg1MmI3NTRmMDk5MDViMzkxZTMzZDdiYzMxZDZjNjFjNzJiODg3NWQyOThiYzRiNDFmNjE1Mjk5MjE0MTM3YTVlYWZhOGI3MTAyMTYiLCJpYXQiOjE1OTg2MDg0MzcsIm5iZiI6MTU5ODYwODQzNywiZXhwIjoxNjMwMTQ0NDM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.U-NiEdZeRQ5Z6S_5EMBHXsUwRgdY_xp5t8bxX4qzbNtBANSPSaswBDIn0D6Zjv_2lYkz89kOOLJxr7vbGFQKgmWYl_MNLTE8kYnxP8Vlat1w6UeQ67PcuLD9QgGcRuh6LF-DlLK_51O4KAp3-xki4N9W1PulP1eHumj_VsB_VQVZqydegIT92R5LgpA-yGY70jHR6ubO0G8fF6QiNjoeoPMwJj2WRGtuawZkTcZ-6S4foWhOZSO1wQUBKx0y63JDZeIOKRtL4O9tTZmZRlGuH550NlTuFcP1JMDp2SXkuOhvd9yv5AMiKud6BlCYRW6TyyhtSZJ8XVe9feiX-NuqJCiXA0BlNlZBeBudLMEohcHUfq9JfL89l_WVxRQ8ZzF5aB1bASrLZn2vAlwrDNQDmJJNMzZpd_FEpqhQh07JTq_45VcJ9i3mGshnukcMiXsJ9BbqMwowLcW505G37kjEn-I1J5QF3mmmZsno2ONzvoDSyr3rs5kN02xZCmHy0h9H8HSrtjBSeuC82zaBiqcJQREXuCm-EpCQLQsFfFCwTFRnaqSbxRB-n4zOtbGtAbboVd7_TGwpOtFSLyYf7LjKiFJ4n9BOV5nuupNFcT_OYOaypv1YmzBFVBMogeUD8ktNdW8dWJZpDyoJw6b1FiujRt46JCYyqdvEgwsQ6bs9BnI"
+    },
+    "user": {
+        "code": 1,
+        "emp_code": 1,
+        "emy_type": 1,
+        "name": "Amrita Ghosh",
+        "designation": "tttt",
+        "mobile_no": "9999999999",
+        "imie_no": null,
+        "status": 1,
+        "created_at": "2020-07-07T13:41:14.000000Z",
+        "updated_at": "2020-07-07T13:41:38.000000Z",
+        "deleted_at": null
+    }
+}
+
+3>  http://wms.rtcsindia.co.in/api/get_all_data_employee
+input:
+"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTMyZDg1MmI3NTRmMDk5MDViMzkxZTMzZDdiYzMxZDZjNjFjNzJiODg3NWQyOThiYzRiNDFmNjE1Mjk5MjE0MTM3YTVlYWZhOGI3MTAyMTYiLCJpYXQiOjE1OTg2MDg0MzcsIm5iZiI6MTU5ODYwODQzNywiZXhwIjoxNjMwMTQ0NDM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.U-NiEdZeRQ5Z6S_5EMBHXsUwRgdY_xp5t8bxX4qzbNtBANSPSaswBDIn0D6Zjv_2lYkz89kOOLJxr7vbGFQKgmWYl_MNLTE8kYnxP8Vlat1w6UeQ67PcuLD9QgGcRuh6LF-DlLK_51O4KAp3-xki4N9W1PulP1eHumj_VsB_VQVZqydegIT92R5LgpA-yGY70jHR6ubO0G8fF6QiNjoeoPMwJj2WRGtuawZkTcZ-6S4foWhOZSO1wQUBKx0y63JDZeIOKRtL4O9tTZmZRlGuH550NlTuFcP1JMDp2SXkuOhvd9yv5AMiKud6BlCYRW6TyyhtSZJ8XVe9feiX-NuqJCiXA0BlNlZBeBudLMEohcHUfq9JfL89l_WVxRQ8ZzF5aB1bASrLZn2vAlwrDNQDmJJNMzZpd_FEpqhQh07JTq_45VcJ9i3mGshnukcMiXsJ9BbqMwowLcW505G37kjEn-I1J5QF3mmmZsno2ONzvoDSyr3rs5kN02xZCmHy0h9H8HSrtjBSeuC82zaBiqcJQREXuCm-EpCQLQsFfFCwTFRnaqSbxRB-n4zOtbGtAbboVd7_TGwpOtFSLyYf7LjKiFJ4n9BOV5nuupNFcT_OYOaypv1YmzBFVBMogeUD8ktNdW8dWJZpDyoJw6b1FiujRt46JCYyqdvEgwsQ6bs9BnI"
+
+output:
+
+{
+    "worker_details": [
+        {
+            "code": 2,
+            "emp_id": "w001",
+            "emp_name": "Partha Sarathi Bhandary",
+            "father_name": "rrrr",
+            "mother_name": "rrrrrr",
+            "emp_type": 2,
+            "emp_designation": 1,
+            "dob": "11/02/2020",
+            "gender": "f",
+            "blood_group": "dd",
+            "phno": "dd",
+            "hqualification": "dd",
+            "email": "dd",
+            "pan_no": null,
+            "marital_status": "dd",
+            "spouse_name": null,
+            "doa": null,
+            "noofchildren": null,
+            "userImage": null,
+            "contact_person": "dd",
+            "emg_address": "dd",
+            "emg_phno": "dd",
+            "emg_alt_phno": null,
+            "relationship": "dd",
+            "c_address": "ddd",
+            "c_dist": "ff",
+            "c_state": "ff",
+            "c_pin": "444444",
+            "p_address": "fff",
+            "p_dist": "ttt",
+            "p_state": "rrrrr",
+            "p_pin": "444444",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "code": 3,
+            "emp_id": "w002",
+            "emp_name": "Arpan Ghosh",
+            "father_name": "rrrr",
+            "mother_name": "rrrrrr",
+            "emp_type": 2,
+            "emp_designation": 1,
+            "dob": "11/02/2020",
+            "gender": "f",
+            "blood_group": "dd",
+            "phno": "dd",
+            "hqualification": "dd",
+            "email": "dd",
+            "pan_no": null,
+            "marital_status": "dd",
+            "spouse_name": null,
+            "doa": null,
+            "noofchildren": null,
+            "userImage": null,
+            "contact_person": "dd",
+            "emg_address": "dd",
+            "emg_phno": "dd",
+            "emg_alt_phno": null,
+            "relationship": "dd",
+            "c_address": "ddd",
+            "c_dist": "ff",
+            "c_state": "ff",
+            "c_pin": "444444",
+            "p_address": "fff",
+            "p_dist": "ttt",
+            "p_state": "rrrrr",
+            "p_pin": "444444",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "supervisor_details": [
+        {
+            "code": 1,
+            "emp_id": "s001",
+            "emp_name": "OLy Rajak",
+            "father_name": "rrrr",
+            "mother_name": "rrrrrr",
+            "emp_type": 1,
+            "emp_designation": 1,
+            "dob": "11/02/2020",
+            "gender": "f",
+            "blood_group": "dd",
+            "phno": "dd",
+            "hqualification": "dd",
+            "email": "dd",
+            "pan_no": null,
+            "marital_status": "dd",
+            "spouse_name": null,
+            "doa": null,
+            "noofchildren": null,
+            "userImage": null,
+            "contact_person": "dd",
+            "emg_address": "dd",
+            "emg_phno": "dd",
+            "emg_alt_phno": null,
+            "relationship": "dd",
+            "c_address": "ddd",
+            "c_dist": "ff",
+            "c_state": "ff",
+            "c_pin": "444444",
+            "p_address": "fff",
+            "p_dist": "ttt",
+            "p_state": "rrrrr",
+            "p_pin": "444444",
+            "created_at": null,
+            "updated_at": null
+        }
+    ]
+}
